@@ -1,0 +1,29 @@
+// glowny kontener
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: @alternate-bg;
+	z-index: 99;
+	.shadow(0 0 3px 0 rgba(0,0,0,0.2));
+}
+
+// Style dla 110px
+.main-header, .header-content, .main-logo, .nav-main, .nav-right {
+	height: @header-height-std;
+}
+
+// Logo
+.logo-wrapper {
+	display: table;
+	.main-logo {
+		display: table-cell;
+		.v-align;
+	}
+}
+
+// Menu mobilne
+.mobile-menu {
+	display: none;
+}
