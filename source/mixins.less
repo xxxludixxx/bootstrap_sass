@@ -57,23 +57,90 @@
   padding: @p-top 0 @p-bottom;
 }
 
-//Ramki
+// Ramki
 .basic-border(@width;@style;@color: @border-color) {
   border-width: @width;
   border-style: @style;
   border-color: @color;
 }
 
-//Akapity
+// Akapity
 .paragraph(@font-size: @font-size-base; @line-height: @line-height-base; @color: @paragraph-color) {
   font-size: @font-size;
   line-height: @line-height;
   color: @color;
 }
 
-//Listy
+// Listy
 .list-style-none {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
+}
+
+// Ikony
+.icon-span-round(@dimension) {
+  .inline-block;
+  border-radius: 50%;
+  .center-text;
+  width: @dimension;
+  height: @dimension;
+}
+
+.icon(@color;@font-size;@line-height: @line-height-base) {
+  color: @color;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+// Overlay
+.dark-overlay {
+  content: "";
+  z-index:0;
+  background: none repeat rgba(30,30,30,0.5);
+  .absolute-one-hundred-size;
+}
+
+// Cień
+.shadow(@properties) {
+  box-shadow: @properties;
+}
+
+// Section line
+.section-line-mix {
+  background: @section-line-color;
+  content: "";
+  height: 2px;
+  margin-top: 10px;
+  width: 45%;
+}
+
+//Przejścia
+.basic-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+//Flexbox
+.flex-display {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+.flex-justify {
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+.flex-align {
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+//Obrazy slidera
+.bg-image(@url) {
+  background-image: @url;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
 }
