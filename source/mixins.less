@@ -113,14 +113,17 @@
   height: 2px;
   margin-top: 10px;
   width: 45%;
+  @media @small {
+    width: 48%;
+  }
 }
 
-//Przejścia
+// Przejścia
 .basic-transition {
   transition: all 0.2s ease-in-out;
 }
 
-//Flexbox
+// Flexbox
 .flex-display {
   display: flex;
   display: -ms-flexbox;
@@ -136,11 +139,10 @@
   -ms-flex-align: center;
 }
 
-//Obrazy slidera
+// Obrazy slidera
 .bg-image(@url) {
   background-image: @url;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-
 }
