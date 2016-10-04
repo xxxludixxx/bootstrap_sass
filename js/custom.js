@@ -7,11 +7,12 @@ $(document).ready(function(){
     $('#promo-slider').carousel({
         interval: 3000
     });
-
+    // Menu mobilne
+    mobileMenu();
 });
 
 // Scroll dla nagłówka
-$(window).bind('scroll', function (event) {
+$(window).bind('scroll', function(event) {
     if($(window).scrollTop() > 20) {
         $('.main-header').addClass('header-short');
         $('.main-logo img').css('max-height', 28);
@@ -20,3 +21,15 @@ $(window).bind('scroll', function (event) {
         $('.main-logo img').css('max-height', 42);
     }
 });
+
+// Menu mobilne
+function mobileMenu() {
+    $('#mobile-icon').bind('click', function(event) {
+        event.preventDefault();
+        $('#main-nav-mobile').show();
+    });
+    $('#mobile-close').bind('click', function(event) {
+       event.preventDefault();
+        $('#main-nav-mobile').hide();
+    });
+}
