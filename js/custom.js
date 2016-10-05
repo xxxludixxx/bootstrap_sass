@@ -11,6 +11,8 @@ $(document).ready(function(){
     mobileMenu();
     // Odliczanie
     $('.timer').countTo();
+    // Skrollr
+    var s = skrollr.init();
 });
 
 // Scroll dla nagłówka
