@@ -253,3 +253,270 @@
     overflow: hidden;
   }
 }
+
+// Najnowsze projekty
+.latest-projects {
+  .padding-top-bottom(50px,0);
+  @media @small {
+    .padding-top-bottom(100px;100px);
+  }
+}
+
+.latest-project-inner {
+  .shadow(0 1px 0 rgba(0, 0, 0, 0.1));
+  padding: 25px;
+  border-radius: 3px;
+  h3 {
+    letter-spacing: 0.5;
+    margin-bottom: 25px;
+    font-weight: 600;
+    a {
+      color: @text-color;
+      text-decoration: none;
+      .basic-transition;
+      &:hover {
+        color: @brand-primary;
+      }
+    }
+  }
+}
+
+.latest-project-head {
+  margin: -25px -25px 25px;
+  a {
+    .relative;
+    .block;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    &:hover img {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    img {
+      opacity: 1;
+      transform: scale(1.07);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+  }
+}
+
+.latest-project-content {
+  font-size: 14px;
+}
+
+.hor-line {
+  margin: 0 -25px 25px;
+  height: 1px;
+  .block;
+  background: lighten(@border-color, 6%);
+}
+
+.comments-link {
+  color: @paragraph-color;
+  text-decoration: none;
+  line-height: 30px;
+  .basic-transition;
+  &:hover {
+    color: @brand-primary;
+    text-decoration: none;
+  }
+}
+
+.read-more {
+  line-height: 30px;
+  font-size: 24px;
+  color: @border-color;
+  &:hover {
+    color: @brand-primary;
+    text-decoration: none;
+  }
+}
+
+// Sekcja Promo
+.promo {
+  margin-top: 50px;
+  @media @medium {
+    margin-top: 0;
+  }
+}
+
+.promo-description {
+  margin: 100px 50px 0;
+  .center-text;
+}
+
+.promo-description-head {
+  margin-bottom: 20px;
+  img {
+    margin: 0 auto 20px;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    strong {
+      color: @brand-primary;
+      font-size: 18px;
+      .block;
+    }
+  }
+}
+
+.promo-description-content {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+// Pasek logo
+.promo-logos {
+  background: @light-bg;
+  .padding-top-bottom(30px;30px);
+  @media @small {
+    .padding-top-bottom(90px;90px);
+  }
+  @media @large {
+    position: absolute;
+    bottom: 100%;
+    width: 50%;
+    .padding-top-bottom(50px;50px);
+  }
+}
+
+.logos-list {
+  .list-style-none;
+  margin: 0 auto;
+  width: 80%;
+  .flex-display;
+  .flex-justify;
+  li {
+    .inline-block;
+    line-height: 1.2;
+    a {
+      color: @dark-bg;
+      .block;
+      opacity: 0.2;
+      text-decoration: none;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 74px;
+      .basic-transition;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+// Stats
+.statistics {
+  .padding-top-bottom(90px;50px);
+  .bg-image(url('../images/stats_back.jpg'));
+  @media @medium {
+    .padding-top-bottom(120px;110px);
+  }
+}
+
+.statistics-content {
+  .center-text;
+  @media @medium {
+    text-align: justify;
+  }
+}
+
+.statistics-block {
+  .inline-block;
+  margin: 0 15px 25px;
+  .center-text;
+}
+
+.statistics-icon {
+  .inline-block;
+  margin-bottom: 9px;
+  font-size: 26px;
+  color: @bright-text-color;
+}
+
+.statistics-value {
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  .block;
+  margin-top: 20px;
+  color: @brand-primary;
+  @media @small {
+    height: 80px;
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+}
+
+.statistics-text {
+  font-size: 15ps;
+  line-height: 1.4;
+  .block;
+  .upper;
+  margin-top: 20px;
+  color: @bright-text-color;
+  opacity: 0.4;
+}
+
+.justify-hack {
+  width: 100%;
+  .inline-block;
+  line-height: 0;
+  font-size: 0;
+}
+
+// Kontakt
+.form-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.contact-form {
+  margin: 50px 20px 20px 20px;
+  @media @medium {
+    margin: 50px 30px 20px 50px;
+    padding-right: 20%;
+  }
+  @media @large {
+    margin: 120px auto 20px 80px;
+  }
+  textarea {
+    height: 220px;
+    padding: 15px;
+    text-indent: 0;
+  }
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+// Pasek na dole
+
+.bottom-row {
+  .padding-top-bottom(70px;70px);
+  background: @logos-bg;
+  color: @bright-text-color;
+  .center-text;
+  h3 {
+    .header-mixin(24px;400);
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  a {
+    margin-top: 20px;
+    background: none;
+    .basic-border(2px;solid;@bright-text-color);
+    .basic-transition;
+    color: @bright-text-color;
+    @media @small {
+      margin-top: 0;
+    }
+    &:hover {
+      background: @bright-text-color;
+      color: @logos-bg;
+    }
+  }
+}

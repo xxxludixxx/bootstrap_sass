@@ -9,6 +9,8 @@ $(document).ready(function(){
     });
     // Menu mobilne
     mobileMenu();
+    // Odliczanie
+    $('.timer').countTo();
 });
 
 // Scroll dla nagłówka
