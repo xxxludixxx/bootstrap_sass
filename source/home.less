@@ -405,3 +405,64 @@
     }
   }
 }
+
+// Stats
+.statistics {
+  .padding-top-bottom(90px;50px);
+  .bg-image(url('../images/stats_back.jpg'));
+  @media @medium {
+    .padding-top-bottom(120px;110px);
+  }
+}
+
+.statistics-content {
+  .center-text;
+  @media @medium {
+    text-align: justify;
+  }
+}
+
+.statistics-block {
+  .inline-block;
+  margin: 0 15px 25px;
+  .center-text;
+}
+
+.statistics-icon {
+  .inline-block;
+  margin-bottom: 9px;
+  font-size: 26px;
+  color: @bright-text-color;
+}
+
+.statistics-value {
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  .block;
+  margin-top: 20px;
+  color: @brand-primary;
+  @media @small {
+    height: 80px;
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+}
+
+.statistics-text {
+  font-size: 15ps;
+  line-height: 1.4;
+  .block;
+  .upper;
+  margin-top: 20px;
+  color: @bright-text-color;
+  opacity: 0.4;
+}
+
+.justify-hack {
+  width: 100%;
+  .inline-block;
+  line-height: 0;
+  font-size: 0;
+}
