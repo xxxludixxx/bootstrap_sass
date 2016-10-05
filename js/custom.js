@@ -12,7 +12,7 @@ $(document).ready(function(){
     // Odliczanie
     $('.timer').countTo();
     // Skrollr
-    var s = skrollr.init();
+    var s = skrollr.init({forceHeight: false});
 });
 
 // Scroll dla nagłówka
