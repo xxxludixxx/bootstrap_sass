@@ -9,6 +9,9 @@ footer {
     padding-top: 80px;
     margin-bottom: 40px;
   }
+  div[class*="col-"] {
+    margin-bottom: 10px;
+  }
   h4 {
     .header-mixin(14px;700);
     margin-bottom: 25px;
@@ -67,4 +70,40 @@ footer {
   .footer-col-container {
     margin-right: 20px;
   }
+}
+
+// Nasza galeria
+.our-gallery {
+  .footer-col-container {
+    margin-left: 0;
+    @media @small {
+      margin-left: 40px;
+    }
+  }
+  li {
+    .inline-block;
+    margin-bottom: 6px;
+    margin-right: 2px;
+    img {
+      width: 65px;
+    }
+    a {
+      .basic-transition;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// Dolny pasek - copyrights
+.copyright {
+  background: @copyright-bg;
+  .upper;
+  .center-text;
+  font-size: 11px;
+}
+
+.copyright-content {
+  .padding-top-bottom(30px;10px);
 }
