@@ -7,8 +7,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Główny plik LESS -->
-	<link rel="stylesheet" href="source/style.less" type="text/less">
+	<!-- Główny plik CSS -->
+	<link rel="stylesheet" href="style/styles.min.css" type="text/css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<!-- Fonty google -->
@@ -20,13 +20,19 @@
 	<!-- JS Bootrap -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- LESS>JS -->
-	<script src="js/less.min.js"></script>
+	<!-- <script src="js/less.min.js"></script> -->
 	<!-- Custom JS -->
 	<script src="js/custom.js"></script>
 	<!-- Odliczanie JS -->
 	<script src="js/jquery.countTo.js"></script>
-	<!-- Skrollr -->
-	<script src="js/skrollr.min.js"></script>
+	<!-- Warunkowe ładowanie biblioteki Skrollr -->
+	<script>
+		if (document.documentElement.clientWidth > 1200) {
+			$.getScript("js/skrollr.min.js", function(){
+				var s = skrollr.init({forceHeight: false});
+			})
+		}
+	</script>
 
 </head>
 
@@ -753,7 +759,7 @@
 									<li><a href="#"><img src="images/footer/4.jpg" alt=""></a></li>
 									<li><a href="#"><img src="images/footer/3.jpg" alt=""></a></li>
 									<li><a href="#"><img src="images/footer/1.jpg" alt=""></a></li>
-									<li><a href="#"><img src="images/footer/3.jpg" alt=""></a></li>
+									<li><a href="#"><img src="images/footer/2.jpg" alt=""></a></li>
 								</ul>
 							</div>
 						</div>

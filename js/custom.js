@@ -11,8 +11,10 @@ $(document).ready(function(){
     mobileMenu();
     // Odliczanie
     $('.timer').countTo();
-    // Skrollr
-    var s = skrollr.init({forceHeight: false});
+    // Logo dla urządzeń mobilnych
+    if (document.documentElement.clientWidth < 480) {
+        $('.main-logo').html('<img src="images/logo_small.png" alt="logo" />')
+    }
 });
 
 // Scroll dla nagłówka
